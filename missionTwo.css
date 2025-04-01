@@ -1,0 +1,172 @@
+/* Define Light and Dark Mode Variables */
+:root {
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+.darkmode {
+    --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+/* General Styles */
+body {
+    font-family: "Tahoma", sans-serif;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Theme Mode */
+body.darkmode {
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+
+/* Reset Default Margin & Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Image Styling */
+img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--base-variant);
+    padding: 15px 100px;
+}
+
+/* Navigation Bar */
+nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    gap: 40px;
+    margin: 20px 0;
+    list-style: none;
+}
+
+.nav-link {
+    border: 1px solid var(--accent-color);
+    padding: 8px 15px;
+    margin: 2px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: lightblue;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    background-color: var(--base-color);
+    padding: 20px;
+}
+
+/* Left Section */
+#left {
+    width: 45%;
+    margin: 30px 50px;
+    text-align: left;
+}
+
+/* Right Section */
+#right {
+    width: 55%;
+    text-align: left;
+    background-color: var(--base-color);
+}
+
+/* Button Styles */
+.btn {
+    background-color: var(--base-variant);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: lightblue;
+}
+
+/* Theme Toggle Button */
+#theme-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#theme-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Projects Section */
+#projects {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#projects li {
+    background-color: var(--base-variant);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Experience Counter */
+#experience {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.container { display: inline-block
+}
+
+/* Typing Effect for Text */
+.text {
+    font-size: 2em;
+    letter-spacing: 3px;
+    font-family: monospace;
+    border-right: none;
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s(56, end), cursor 0.6s step-end infinite alternate;
+}
+
+/* Cursor Blinking Animation */
+@keyframes cursor {
+    50% { border-color: transparent; }
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+}
